@@ -1,7 +1,9 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>{{ $store.state.count }}</h1>
+    <h1>{{ $store.getters.score }}</h1>
+    <button @click="add">Add</button>
+    <button @click="asyncAdd">AsyncAdd</button>
   </div>
 </template>
 
@@ -11,8 +13,20 @@ import HelloWorld from './components/HelloWorld.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    HelloWorld,
+  },
+  methods: {
+    add() {
+      this.$store.commit('add', 2)
+    },
+    asyncAdd() {
+      this.$store.dispatch('asyncAdd', 4).then((res) => {
+        if (res.ok) {
+          alert('ok')
+        }
+      })
+    },
+  },
 }
 </script>
 

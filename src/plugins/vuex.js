@@ -1,19 +1,7 @@
-# 简单的 vuex
-
-## 预览
-
-```
-yarn install
-yarn serve
-```
-
-## 实现
-
-```js
 // 1. 维护状态 state （响应式）
 // 2. 修改状态 commit
 // 3. 业务逻辑控制 dispatch
-// 4. 状态派发 getter
+// 4. 状态派发 getter（响应式）
 // 5. 混入
 
 let Vue
@@ -70,4 +58,3 @@ class Store {
 }
 
 export default { Store, install }
-```
