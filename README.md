@@ -1,5 +1,7 @@
 # 简单的 vuex
 
+> [详见博客](https://yuufen.com/blog/post/pgLxFgJc5/)
+
 ## 预览
 
 ```
